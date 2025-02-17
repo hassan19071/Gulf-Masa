@@ -1,0 +1,69 @@
+@use "./vars.scss" as *;
+.hero-carousel {
+  .hero-slide {
+    height: 500px;
+    background-position: center;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    background-size: cover;
+    background-position: center;
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: #0b0b0b89;
+      z-index: 1;
+    }
+    .hero-text {
+      position: relative;
+      z-index: 3;
+      width: 60%;
+      @media (max-width: 991px) {
+        width: 80%;
+      }
+      h1 {
+        color: #fff;
+        font-size: calc(2rem + 1.5vw);
+      }
+      p {
+        color: #eee;
+        margin: 15px 0 30px;
+        font-size: 18px;
+      }
+      a {
+        background-color: $mainColor;
+        color: #fff;
+        padding: 10px 20px;
+        text-transform: capitalize;
+        transition: 0.3s;
+        &:hover {
+          background-color: $headColor;
+        }
+      }
+    }
+  }
+  .swiper-pagination {
+    .swiper-pagination-bullet {
+      width: 50px;
+      height: 50px;
+      background-position: center;
+      background-size: cover;
+      border-radius: 0;
+      transition: 0.3s;
+      &:nth-child(1) {
+        background-image: url("../../assets/hero-bg01.jpg");
+      }
+      &:nth-child(2) {
+        background-image: url("../../assets/hero-bg02.jpg");
+      }
+      &:nth-child(3) {
+        background-image: url("../../assets/hero-bg03.jpg");
+      }
+    }
+  }
+}

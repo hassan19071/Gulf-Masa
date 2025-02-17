@@ -1,0 +1,56 @@
+@use "./vars.scss" as *;
+
+.about {
+  .about-text {
+    @include HeadStyle;
+    .mission-vision {
+      .mission,
+      .vision {
+        border: 1px solid #eee;
+        padding: 20px;
+      }
+      h4 {
+        font-size: 20px;
+        text-transform: capitalize;
+        color: $headColor;
+      }
+    }
+  }
+  .about-imgs {
+    .c {
+      img {
+        height: 500px;
+        object-fit: cover;
+        @media (max-width: 991px) {
+          height: 350px;
+        }
+      }
+    }
+  }
+  .message {
+    width: 100%;
+    margin: 50px auto 0;
+    background-color: $mainColor;
+    padding: 40px;
+    border-radius: 30px;
+    .quote {
+      .icon {
+        font-size: 40px;
+        @media (max-width: 991px) {
+          font-size: 30px;
+        }
+      }
+      p {
+        font-size: 18px;
+      }
+    }
+    .manager {
+      h4 {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+.about-paragraph {
+  @include HeadStyle;
+}

@@ -1,0 +1,33 @@
+$mainColor: #64b5e5;
+$headColor: #204253;
+
+@mixin HeadStyle() {
+  .head {
+    h2 {
+      font-size: calc(1rem + 1vw);
+      text-transform: uppercase;
+      width: fit-content;
+      position: relative;
+      margin-bottom: 10px;
+      color: $headColor;
+      &::before {
+        content: "";
+        position: absolute;
+        width: 100px;
+        height: 3px;
+        background-color: $mainColor;
+        left: 0;
+        bottom: -2px;
+      }
+      &::after {
+        content: "";
+        position: absolute;
+        width: 70px;
+        height: 3px;
+        background-color: $headColor;
+        left: 0;
+        bottom: -6px;
+      }
+    }
+  }
+}

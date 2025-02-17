@@ -1,0 +1,25 @@
+@use "./vars.scss" as *;
+
+.error{
+    h1{
+        color: $headColor;
+        font-size: calc(2.5rem + 2vw);
+        text-transform: uppercase;
+    }
+    h3{
+        font-size: 20px;
+        margin-bottom: 20px;
+        text-transform: capitalize;
+    }
+    a{
+        padding: 8px 15px;
+        background-color: $headColor;
+        color: #fff;
+        transition: .3s;
+        margin-top: 20px;
+        display: inline-block;
+        &:hover{
+            background-color: $mainColor;
+        }
+    }
+}

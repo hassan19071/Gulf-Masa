@@ -1,0 +1,132 @@
+@use "./vars.scss" as *;
+
+.contact-infos-section {
+  position: relative;
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: $mainColor;
+    background: linear-gradient(
+      90deg,
+      rgba(32, 66, 83, 1) 0%,
+      rgba(100, 181, 229, 1) 100%
+    );
+    clip-path: polygon(0 55%, 100% 1%, 100% 100%, 0% 100%);
+    z-index: -1;
+  }
+  .contact-form {
+    background-color: #fff;
+    box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px,
+      rgba(17, 17, 26, 0.1) 0px 0px 8px;
+    padding: 30px;
+
+    h4 {
+      color: $headColor;
+    }
+
+    label {
+      font-size: 14px;
+      font-weight: 400;
+    }
+
+    input,
+    textarea {
+      &:focus {
+        box-shadow: 0 0 0 0.25rem rgba($headColor, 0.25);
+        border-color: $headColor;
+      }
+    }
+
+    button {
+      background-color: $mainColor;
+      color: #fff;
+      padding: 6px 30px;
+      width: 100%;
+      text-transform: uppercase;
+      transition: 0.3s;
+
+      &:focus,
+      &:hover {
+        background-color: $headColor;
+        color: #fff;
+      }
+    }
+  }
+  .infos {
+    .head {
+      h4 {
+        font-size: 22px;
+        font-weight: 400;
+        color: #fff;
+      }
+      p {
+        color: #eee;
+      }
+    }
+    .info {
+      .icon {
+        width: 40px;
+        height: 40px;
+        border: 1px solid #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        color: #fff;
+        font-size: 18px;
+      }
+      .text {
+        a,
+        span {
+          color: #fff;
+          font-weight: 300;
+          font-size: 17px;
+        }
+      }
+    }
+    hr {
+      color: #fff;
+    }
+    .social-media {
+      a {
+        margin-right: 10px;
+        font-size: 20px;
+        color: #fff;
+      }
+    }
+  }
+}
+
+.contact-us {
+  label {
+    font-size: 14px;
+    font-weight: 400;
+  }
+
+  input,
+  textarea {
+    &:focus {
+      box-shadow: 0 0 0 0.25rem rgba($headColor, 0.25);
+      border-color: $headColor;
+    }
+  }
+
+  button {
+    background-color: $mainColor;
+    color: #fff;
+    padding: 6px 30px;
+    width: 100%;
+    text-transform: uppercase;
+    transition: 0.3s;
+
+    &:focus,
+    &:hover {
+      background-color: $headColor;
+      color: #fff;
+    }
+  }
+}

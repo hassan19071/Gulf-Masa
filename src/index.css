@@ -1,0 +1,46 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Roboto:ital,wght@0,100..900;1,100..900&family=Tajawal:wght@200;300;400;500;700;800;900&display=swap");
+
+body {
+  overflow-x: hidden;
+  line-height: 1.6;
+  font-family: "Roboto", serif;
+  font-weight: 400;
+  font-size: 16px;
+  font-weight: 300;
+  color: #0b0b0b;
+}
+
+body[dir="rtl"] {
+  text-align: right;
+  font-family: "Tajawal", serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Oswald", serif;
+}
+a {
+  text-decoration: none;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(5px);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #64b5e5;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #64b5e5;
+}

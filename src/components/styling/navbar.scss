@@ -1,0 +1,166 @@
+@use "./vars.scss" as *;
+.navbar{
+    background-color: $headColor;
+    @media (max-width:992px) {
+        background-color: #fff;
+    }
+    .navbar-content{
+        .links{
+            a{
+                color: #fff;
+                font-size: 15px;
+                text-transform: capitalize;
+                border-left: 2px solid transparent;
+                padding: 8px 18px;
+                transition: .3s;
+                font-weight: 500;
+                &.active,&:hover{
+                    border-left-color: $mainColor;
+                }
+            }
+        }
+        .language{
+            a{
+                &.lang{
+                    color: #fff;
+                    transition: .3s;
+                    &:hover{
+                        color: $mainColor;
+                    }
+                }
+                &.contact{
+                    background-color: #fff;
+                    padding: 8px 15px;
+                    color: $headColor;
+                    text-transform: capitalize;
+                    transition: .3s;
+                    &:hover{
+                        background-color: $mainColor;
+                        color: #fff;
+                    }
+                }
+            }
+        }
+        .menu{
+            width: 40px;
+            cursor: pointer;
+            align-items: end;
+          span{
+            height: 3px;
+            background-color: $headColor;
+            width: 100%;
+            &:nth-child(2){
+                width: 90%;
+            }
+          }
+        }
+    }
+    .mobile-links{
+        position: relative;
+        height: 100vh;
+        z-index: 444;
+        .overlay{
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #00000067;
+            opacity: 0;
+            visibility: hidden;
+            transition: .3s;
+            &.active{
+                opacity: 1;
+                visibility: visible;
+            }
+        }
+        .links-container{
+            background-color: #fff;
+            position: fixed;
+            padding: 30px;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            width: 400px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transform: translateX(100%);
+            transition: .3s;
+            overflow-y: auto;
+            &.active{
+                transform: translateX(0);
+            }
+            .logo-x{
+                .x{
+                    font-size: 30px;
+                    color: $headColor;
+                    cursor: pointer;
+                }
+            }
+            .links{
+                a{
+                    color: $headColor;
+                    text-transform: capitalize;
+                    padding: 6px 12px;
+                    transition: .3s;
+                    &.active,&:hover{
+                        background-color: $mainColor;
+                        color: #fff;
+                    }
+                }
+            }
+            .contact-infos{
+                .icon{
+                    width: 35px;
+                    height: 35px;
+                    border: 2px solid $mainColor;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    border-radius: 50%;
+                    color: $mainColor;
+                    font-size: 15px;
+                }
+                .info-content{
+                    h6{
+                        font-size: 15px;
+                        color: $headColor;
+                        font-weight: 400;
+                        margin-bottom: 0;
+                        text-transform: capitalize;
+                    }
+                    a{
+                        text-decoration: none;
+                    }
+                    span{
+                        color: #444;
+                        font-size: 15px;
+                    }
+                }
+            }
+            .social-media{
+                a{
+                    color: $headColor;
+                    margin-right: 10px;
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+}
+
+.breadcrumb-container{
+    background-color: darken(#333, 5%);
+    .breadcrumb-item+.breadcrumb-item::before {
+        color: #fff;
+    }
+    li{
+        font-size: 14px;
+        font-weight: 500;
+        color: #fff !important;
+        a{
+            color: $mainColor;
+        }
+    }
+}

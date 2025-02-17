@@ -1,0 +1,20 @@
+@use "./vars.scss" as *;
+
+.get-in-touch{
+    background-color: $headColor;
+    .text{
+        h2{
+            color: #fff;
+            font-size: calc(.8rem + 1vw);
+        }
+    }
+    .button{
+        a{
+            background-color: $mainColor;
+            color: #fff;
+            padding: 10px 20px;
+            font-size:17px;
+            font-weight: 500;
+        }
+    }
+}
