@@ -21,7 +21,7 @@ function ContactInfos() {
     if (!formData.name.trim()) newErrors.name = "Full Name is required";
     if (!formData.email.trim()) {
       newErrors.email = "Email is required";
-    } else if (!/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/.test(formData.email)) {
+    } else if (!/^[\w-.]+@([\w-]+\.)+[\w-]{2,4}$/.test(formData.email)) {
       newErrors.email = "Invalid email format";
     }
     if (!formData.phone.trim()) newErrors.phone = "Phone number is required";
