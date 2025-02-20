@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import {
-  MdLanguage,
   MdClose,
   MdPhone,
   MdEmail,
@@ -54,13 +53,13 @@ function Navbar({page}) {
             </Link>
           </div>
           <div className="language d-lg-flex align-items-center d-none">
-            <Link to="/contact" className="me-4 contact">
+            <Link to="/contact" className="me-0 contact">
               Contact Us
             </Link>
-            <Link to="/ar" className="lang">
+            {/* <Link to="/ar" className="lang">
               <MdLanguage />
               Ar
-            </Link>
+            </Link> */}
           </div>
           <div className="menu d-flex flex-column d-lg-none" onClick={handleMenuStatus}>
             <span></span>
@@ -102,13 +101,13 @@ function Navbar({page}) {
             <Link as={Link} to="/projects" className={page === "projects"? "mb-2 active":"mb-2"}>
               Projects
             </Link>
-            <Link as={Link} to="/contact" className={page === "contact"? "mb-2 active":"mb-2"}>
+            <Link as={Link} to="/contact" className={page === "contact"? "mb-0 active":"mb-0"}>
               Contact
             </Link>
-            <Link to="/ar" className="lang">
+            {/* <Link to="/ar" className="lang">
               <MdLanguage />
               Ar
-            </Link>
+            </Link> */}
           </div>
           <div className="menu-footer">
             <div className="contact-infos d-flex flex-column">
